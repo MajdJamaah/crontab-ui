@@ -115,7 +115,7 @@ exports.set_crontab = function(env_vars, callback){
 				}
 
 				if (tab.mailing && JSON.stringify(tab.mailing) != "{}"){
-					crontab_string += "; /usr/local/bin/node " + __dirname + "/bin/crontab-ui-mailer.js " + tab._id + " " + stdout + " " + stderr;
+					crontab_string += ";if [ -s " + stderr + " ]; then /usr/local/bin/node " + __dirname + "/bin/crontab-ui-mailer.js " + tab._id + " " + stdout + " " + stderr + ";fi;";
 				}
 
 				crontab_string += "\n";
@@ -233,3 +233,4 @@ exports.autosave_crontab = function(callback) {
 	let env_vars = exports.get_env();
 	exports.set_crontab(env_vars, callback);
 };
+
