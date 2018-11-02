@@ -1,7 +1,7 @@
 {
-  "name": "Crontab UI",
+  "name": "OpenSooq Crontab UI",
   "description": "Easy and safe way to manage your crontab file",
-  "repository": "https://github.com/alseambusher/crontab-ui",
+  "repository": "https://github.com/MajdJamaah/crontab-ui",
   "logo": "http://node-js-sample.herokuapp.com/node.svg",
   "keywords": ["Crontab", "node"]
 }
